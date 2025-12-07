@@ -12,54 +12,59 @@
 </head>
 <body>
     <div class="reveal">
-        <div class="slides">
+       <div class="slides">
 
-            <section>
-                <h2>Q3 Financial Earnings Report</h2>
-                <p>Technical Consultant Review</p>
-                <p><small>Contact: <a href="mailto:24f2001048@ds.study.iitm.ac.in">24f2001048@ds.study.iitm.ac.in</a></small></p>
-                
-                <aside class="notes">
-                    Welcome stakeholders. Introduce yourself and mention that this report covers the Q3 performance metrics and technical implementations.
-                </aside>
-            </section>
+    <section>
+        <h2>Q3 Financial Earnings Report</h2>
+        <p>Technical Consultant Review</p>
+        <p style="font-size: 0.8em; margin-top: 20px;">
+            Presenter Email: <br>
+            <a href="mailto:24f2001048@ds.study.iitm.ac.in" style="color: #42affa;">
+                24f2001048@ds.study.iitm.ac.in
+            </a>
+        </p>
+        
+        <aside class="notes">
+            Welcome stakeholders. Introduce yourself and mention that this report covers the Q3 performance metrics and technical implementations.
+        </aside>
+    </section>
 
-            <section data-markdown>
-                <textarea data-template>
-                    ## Executive Summary
-                    
-                    We have observed significant growth in our automated trading sector.
-                    
-                    * **Revenue:** Up by 15%
-                    * **OpEx:** Down by 5%
-                    * **New Clients:** 200+
-                    
-                    _Markdown rendering enabled for rapid content iteration._
-                </textarea>
-                <aside class="notes">
-                    Note to self: Emphasize the reduction in operational expenses due to the new AI automation tools.
-                </aside>
-            </section>
+    <section data-markdown>
+        <textarea data-template>
+            ## Executive Summary
+            
+            We have observed significant growth in our automated trading sector.
+            
+            * **Revenue:** Up by 15%
+            * **OpEx:** Down by 5%
+            * **New Clients:** 200+
+            
+            _Markdown rendering enabled for rapid content iteration._
+        </textarea>
+        <aside class="notes">
+            Note to self: Emphasize the reduction in operational expenses due to the new AI automation tools.
+        </aside>
+    </section>
 
-            <section>
-                <h3>Growth Drivers</h3>
-                <p>Key contributors to this quarter's success:</p>
-                <ul>
-                    <li class="fragment fade-up">Cloud Infrastructure Migration</li>
-                    <li class="fragment fade-up">Real-time Fraud Detection</li>
-                    <li class="fragment fade-up">Algorithmic Trading Optimization</li>
-                </ul>
-                <p class="fragment highlight-red" style="margin-top: 20px;">Target met 2 weeks ahead of schedule.</p>
-                
-                <aside class="notes">
-                    Click through these points one by one. Pause on the Algorithmic Trading point to discuss the Python implementation.
-                </aside>
-            </section>
+    <section>
+        <h3>Growth Drivers</h3>
+        <p>Key contributors to this quarter's success:</p>
+        <ul>
+            <li class="fragment fade-up">Cloud Infrastructure Migration</li>
+            <li class="fragment fade-up">Real-time Fraud Detection</li>
+            <li class="fragment fade-up">Algorithmic Trading Optimization</li>
+        </ul>
+        <p class="fragment highlight-red" style="margin-top: 20px;">Target met 2 weeks ahead of schedule.</p>
+        
+        <aside class="notes">
+            Click through these points one by one. Pause on the Algorithmic Trading point to discuss the Python implementation.
+        </aside>
+    </section>
 
-            <section>
-                <h3>Algorithmic Implementation</h3>
-                <p>We utilized a new Python model for risk assessment:</p>
-                <pre><code class="language-python" data-trim data-noescape>
+    <section>
+        <h3>Algorithmic Implementation</h3>
+        <p>We utilized a new Python model for risk assessment:</p>
+        <pre><code class="language-python" data-trim data-noescape>
 def calculate_risk_exposure(portfolio_value, volatility):
     """
     Calculates Value at Risk (VaR)
@@ -71,33 +76,42 @@ def calculate_risk_exposure(portfolio_value, volatility):
 # Q3 Assessment
 current_risk = calculate_risk_exposure(1000000, 0.02)
 print(f"VaR: ${current_risk}")
-                </code></pre>
-                
-                <aside class="notes">
-                    Explain the variable volatility inputs. Mention that this code is now running in production on AWS Lambda.
-                </aside>
-            </section>
+        </code></pre>
+        
+        <aside class="notes">
+            Explain the variable volatility inputs. Mention that this code is now running in production on AWS Lambda.
+        </aside>
+    </section>
 
-            <section>
-                <h3>Financial Modeling</h3>
-                <p>The Black-Scholes model was applied for options pricing:</p>
-                
-                \[
-                C = S_0 N(d_1) - K e^{-rT} N(d_2)
-                \]
+    <section>
+        <h3>Financial Modeling</h3>
+        <p>The Black-Scholes model was applied for options pricing:</p>
+        
+        \[
+        C = S_0 N(d_1) - K e^{-rT} N(d_2)
+        \]
 
-                <p>Where $d_1$ is defined as:</p>
-                
-                \[
-                d_1 = \frac{\ln(S_0/K) + (r + \sigma^2/2)T}{\sigma\sqrt{T}}
-                \]
-                
-                <aside class="notes">
-                    Don't get bogged down in the math. Just highlight that we are using standard industry models for valuation.
-                </aside>
-            </section>
+        <p>Where $d_1$ is defined as:</p>
+        
+        \[
+        d_1 = \frac{\ln(S_0/K) + (r + \sigma^2/2)T}{\sigma\sqrt{T}}
+        \]
+        
+        <aside class="notes">
+            Don't get bogged down in the math. Just highlight that we are using standard industry models for valuation.
+        </aside>
+    </section>
 
-        </div>
+    <section>
+        <h3>Thank You</h3>
+        <p>For detailed inquiries regarding the Q3 report, please contact:</p>
+        <p>
+            <strong>Technical Consultant</strong><br>
+            <a href="mailto:24f2001048@ds.study.iitm.ac.in">24f2001048@ds.study.iitm.ac.in</a>
+        </p>
+    </section>
+
+         </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.js"></script>
