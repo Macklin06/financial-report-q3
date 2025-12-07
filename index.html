@@ -3,6 +3,8 @@
 <head>
     <meta charset="utf-8">
     <title>Quarterly Earnings Report - Q3 2025</title>
+    <meta name="description" content="Financial Presentation">
+    <meta name="author" content="24f2001048@ds.study.iitm.ac.in">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css">
@@ -12,106 +14,119 @@
 </head>
 <body>
     <div class="reveal">
-       <div class="slides">
+        <div class="slides">
 
-    <section>
-        <h2>Q3 Financial Earnings Report</h2>
-        <p>Technical Consultant Review</p>
-        <p style="font-size: 0.8em; margin-top: 20px;">
-            Presenter Email: <br>
-            <a href="mailto:24f2001048@ds.study.iitm.ac.in" style="color: #42affa;">
-                24f2001048@ds.study.iitm.ac.in
-            </a>
-        </p>
-        
-        <aside class="notes">
-            Welcome stakeholders. Introduce yourself and mention that this report covers the Q3 performance metrics and technical implementations.
-        </aside>
-    </section>
+            <section>
+                <h2>Q3 Financial Earnings Report</h2>
+                <p style="color: #888;">Technical Consultant Review</p>
+                <div style="margin-top: 40px; font-size: 0.8em; border-top: 1px solid #666; padding-top: 20px;">
+                    <p>Presented by:</p>
+                    <a href="mailto:24f2001048@ds.study.iitm.ac.in" style="color: #42affa; text-decoration: none;">
+                        24f2001048@ds.study.iitm.ac.in
+                    </a>
+                </div>
+                
+                <aside class="notes">
+                    Good morning/afternoon. Welcome to the Q3 earnings technical review. My contact information is listed on the screen for any follow-up questions regarding the data sources.
+                </aside>
+            </section>
 
-    <section data-markdown>
-        <textarea data-template>
-            ## Executive Summary
-            
-            We have observed significant growth in our automated trading sector.
-            
-            * **Revenue:** Up by 15%
-            * **OpEx:** Down by 5%
-            * **New Clients:** 200+
-            
-            _Markdown rendering enabled for rapid content iteration._
-        </textarea>
-        <aside class="notes">
-            Note to self: Emphasize the reduction in operational expenses due to the new AI automation tools.
-        </aside>
-    </section>
+            <section data-markdown>
+                <textarea data-template>
+                    ## Executive Summary
+                    
+                    The automated trading division has outperformed traditional metrics.
+                    
+                    * **Revenue Growth:** <span style="color:green">+15%</span> YoY
+                    * **Operational Costs:** <span style="color:green">-5%</span> (Efficiency Gains)
+                    * **New Institutional Clients:** 200+
+                    
+                    ---
+                    
+                    _Data aggregated from global server logs._
+                </textarea>
+                <aside class="notes">
+                    Use this slide to give a high-level overview. Note the cost reduction specifically tied to the Python automation scripts we deployed last month.
+                </aside>
+            </section>
 
-    <section>
-        <h3>Growth Drivers</h3>
-        <p>Key contributors to this quarter's success:</p>
-        <ul>
-            <li class="fragment fade-up">Cloud Infrastructure Migration</li>
-            <li class="fragment fade-up">Real-time Fraud Detection</li>
-            <li class="fragment fade-up">Algorithmic Trading Optimization</li>
-        </ul>
-        <p class="fragment highlight-red" style="margin-top: 20px;">Target met 2 weeks ahead of schedule.</p>
-        
-        <aside class="notes">
-            Click through these points one by one. Pause on the Algorithmic Trading point to discuss the Python implementation.
-        </aside>
-    </section>
+            <section>
+                <h3>Growth Drivers</h3>
+                <p>Strategic technical initiatives launched this quarter:</p>
+                <ul>
+                    <li class="fragment fade-in-then-semi-out">Cloud Infrastructure Migration (AWS)</li>
+                    <li class="fragment fade-in-then-semi-out">Real-time Fraud Detection AI</li>
+                    <li class="fragment fade-in-then-semi-out">High-Frequency Trading Optimization</li>
+                </ul>
+                <div class="fragment fade-up" style="background-color: #2a7a39; color: white; padding: 10px; margin-top: 20px; border-radius: 5px;">
+                    Result: 99.99% Uptime Achieved
+                </div>
+                
+                <aside class="notes">
+                    Press the 'Right Arrow' key to reveal each bullet point. Emphasize that the Uptime achievement is a direct result of the cloud migration.
+                </aside>
+            </section>
 
-    <section>
-        <h3>Algorithmic Implementation</h3>
-        <p>We utilized a new Python model for risk assessment:</p>
-        <pre><code class="language-python" data-trim data-noescape>
-def calculate_risk_exposure(portfolio_value, volatility):
+            <section>
+                <h3>Risk Analysis Model</h3>
+                <p style="font-size: 0.7em;">We implemented a new VaR (Value at Risk) calculation engine:</p>
+                <pre><code class="language-python" data-trim data-line-numbers="1-5|9-11">
+import numpy as np
+
+def calculate_var(portfolio_value, volatility, confidence=1.65):
     """
-    Calculates Value at Risk (VaR)
+    Calculate Parametric VaR (95% Confidence)
     """
-    confidence_level = 1.65  # 95% confidence
-    var = portfolio_value * volatility * confidence_level
-    return var
+    return portfolio_value * volatility * confidence
 
-# Q3 Assessment
-current_risk = calculate_risk_exposure(1000000, 0.02)
-print(f"VaR: ${current_risk}")
-        </code></pre>
-        
-        <aside class="notes">
-            Explain the variable volatility inputs. Mention that this code is now running in production on AWS Lambda.
-        </aside>
-    </section>
+# Production Implementation
+portfolio_total = 5000000  # $5M Portfolio
+daily_volatility = 0.012   # 1.2%
+risk_exposure = calculate_var(portfolio_total, daily_volatility)
 
-    <section>
-        <h3>Financial Modeling</h3>
-        <p>The Black-Scholes model was applied for options pricing:</p>
-        
-        \[
-        C = S_0 N(d_1) - K e^{-rT} N(d_2)
-        \]
+print(f"Daily Risk Exposure: ${risk_exposure:,.2f}")
+                </code></pre>
+                
+                <aside class="notes">
+                    Walk through the code. Highlight lines 1-5 to explain the function definition, then lines 9-11 to show how we apply it to the $5M portfolio.
+                </aside>
+            </section>
 
-        <p>Where $d_1$ is defined as:</p>
-        
-        \[
-        d_1 = \frac{\ln(S_0/K) + (r + \sigma^2/2)T}{\sigma\sqrt{T}}
-        \]
-        
-        <aside class="notes">
-            Don't get bogged down in the math. Just highlight that we are using standard industry models for valuation.
-        </aside>
-    </section>
+            <section>
+                <h3>Options Pricing Formula</h3>
+                <p>Valuation based on the Black-Scholes model:</p>
+                
+                <div style="font-size: 0.8em; margin: 30px 0;">
+                    \[
+                    C(S, t) = N(d_1)S - N(d_2)Ke^{-r(T-t)}
+                    \]
+                </div>
 
-    <section>
-        <h3>Thank You</h3>
-        <p>For detailed inquiries regarding the Q3 report, please contact:</p>
-        <p>
-            <strong>Technical Consultant</strong><br>
-            <a href="mailto:24f2001048@ds.study.iitm.ac.in">24f2001048@ds.study.iitm.ac.in</a>
-        </p>
-    </section>
+                <p style="font-size: 0.7em;">Where the volatility factor ($d_1$) is:</p>
+                
+                <div style="font-size: 0.7em;">
+                    \[
+                    d_1 = \frac{\ln(S/K) + (r + \frac{\sigma^2}{2})(T-t)}{\sigma\sqrt{T-t}}
+                    \]
+                </div>
+                
+                <aside class="notes">
+                    We use this formula to price our European call options. S is current stock price, K is strike price.
+                </aside>
+            </section>
 
-         </div>
+            <section>
+                <h3>Q&A</h3>
+                <p>Thank you for your attention.</p>
+                <p style="margin-top: 40px;">
+                    <small>Get in touch regarding this report:</small><br>
+                    <a href="mailto:24f2001048@ds.study.iitm.ac.in" style="font-size: 1.2em; color: #42affa; font-weight: bold;">
+                        24f2001048@ds.study.iitm.ac.in
+                    </a>
+                </p>
+            </section>
+
+        </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.js"></script>
@@ -123,10 +138,13 @@ print(f"VaR: ${current_risk}")
     <script>
         // Initialize Reveal
         Reveal.initialize({
-            controls: true,
-            progress: true,
-            center: true,
-            hash: true,
+            controls: true,       // Show arrows
+            progress: true,       // Show progress bar
+            center: true,         // Center slides vertically
+            hash: true,           // Add slide ID to URL
+            slideNumber: true,    // Show slide numbers
+
+            // Load Plugins
             plugins: [ RevealMarkdown, RevealHighlight, RevealMath.KaTeX, RevealNotes ]
         });
     </script>
