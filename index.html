@@ -9,7 +9,6 @@
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/league.css">
-    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/monokai.css">
 </head>
 <body>
@@ -17,9 +16,9 @@
         <div class="slides">
 
             <section>
-                <h2>Q3 Financial Earnings Report</h2>
-                <p style="color: #888;">Technical Consultant Review</p>
-                <div style="margin-top: 40px; font-size: 0.8em; border-top: 1px solid #666; padding-top: 20px;">
+                <h2 class="fragment fade-down">Q3 Financial Earnings Report</h2>
+                <p class="fragment fade-up" style="color: #888;">Technical Consultant Review</p>
+                <div class="fragment fade-in" style="margin-top: 40px; font-size: 0.8em; border-top: 1px solid #666; padding-top: 20px;">
                     <p>Presented by:</p>
                     <a href="mailto:24f2001048@ds.study.iitm.ac.in" style="color: #42affa; text-decoration: none;">
                         24f2001048@ds.study.iitm.ac.in
@@ -37,13 +36,13 @@
                     
                     The automated trading division has outperformed traditional metrics.
                     
-                    * **Revenue Growth:** <span style="color:green">+15%</span> YoY
-                    * **Operational Costs:** <span style="color:green">-5%</span> (Efficiency Gains)
-                    * **New Institutional Clients:** 200+
+                    * **Revenue Growth:** <span style="color:green">+15%</span> YoY <!-- .element: class="fragment fade-in-then-semi-out" -->
+                    * **Operational Costs:** <span style="color:green">-5%</span> (Efficiency Gains) <!-- .element: class="fragment fade-in-then-semi-out" -->
+                    * **New Institutional Clients:** 200+ <!-- .element: class="fragment fade-in-then-semi-out" -->
                     
                     ---
                     
-                    _Data aggregated from global server logs._
+                    _Data aggregated from global server logs._ <!-- .element: class="fragment fade-up" -->
                 </textarea>
                 <aside class="notes">
                     Use this slide to give a high-level overview. Note the cost reduction specifically tied to the Python automation scripts we deployed last month.
@@ -52,7 +51,7 @@
 
             <section>
                 <h3>Growth Drivers</h3>
-                <p>Strategic technical initiatives launched this quarter:</p>
+                <p class="fragment fade-in">Strategic technical initiatives launched this quarter:</p>
                 <ul>
                     <li class="fragment fade-in-then-semi-out">Cloud Infrastructure Migration (AWS)</li>
                     <li class="fragment fade-in-then-semi-out">Real-time Fraud Detection AI</li>
@@ -68,9 +67,9 @@
             </section>
 
             <section>
-                <h3>Risk Analysis Model</h3>
-                <p style="font-size: 0.7em;">We implemented a new VaR (Value at Risk) calculation engine:</p>
-                <pre><code class="language-python" data-trim data-line-numbers="1-5|9-11">
+                <h3 class="fragment fade-down">Risk Analysis Model</h3>
+                <p class="fragment fade-in" style="font-size: 0.7em;">We implemented a new VaR (Value at Risk) calculation engine:</p>
+                <pre class="fragment fade-up"><code class="language-python" data-trim data-line-numbers="1-5|9-11">
 import numpy as np
 
 def calculate_var(portfolio_value, volatility, confidence=1.65):
@@ -86,6 +85,9 @@ risk_exposure = calculate_var(portfolio_total, daily_volatility)
 
 print(f"Daily Risk Exposure: ${risk_exposure:,.2f}")
                 </code></pre>
+                <p class="fragment highlight-red" style="font-size: 0.8em; margin-top: 20px;">
+                    <strong>Key Insight:</strong> Daily risk exposure calculated at $99,000
+                </p>
                 
                 <aside class="notes">
                     Walk through the code. Highlight lines 1-5 to explain the function definition, then lines 9-11 to show how we apply it to the $5M portfolio.
@@ -93,21 +95,25 @@ print(f"Daily Risk Exposure: ${risk_exposure:,.2f}")
             </section>
 
             <section>
-                <h3>Options Pricing Formula</h3>
-                <p>Valuation based on the Black-Scholes model:</p>
+                <h3 class="fragment fade-down">Options Pricing Formula</h3>
+                <p class="fragment fade-in">Valuation based on the Black-Scholes model:</p>
                 
-                <div style="font-size: 0.8em; margin: 30px 0;">
+                <div class="fragment zoom-in" style="font-size: 0.8em; margin: 30px 0;">
                     \[
                     C(S, t) = N(d_1)S - N(d_2)Ke^{-r(T-t)}
                     \]
                 </div>
 
-                <p style="font-size: 0.7em;">Where the volatility factor ($d_1$) is:</p>
+                <p class="fragment fade-in" style="font-size: 0.7em;">Where the volatility factor ($d_1$) is:</p>
                 
-                <div style="font-size: 0.7em;">
+                <div class="fragment fade-up" style="font-size: 0.7em;">
                     \[
                     d_1 = \frac{\ln(S/K) + (r + \frac{\sigma^2}{2})(T-t)}{\sigma\sqrt{T-t}}
                     \]
+                </div>
+                
+                <div class="fragment fade-in" style="background-color: #1a4d7a; padding: 15px; margin-top: 20px; border-radius: 5px; font-size: 0.8em;">
+                    <strong>Application:</strong> Used for pricing 5,000+ option contracts this quarter
                 </div>
                 
                 <aside class="notes">
@@ -116,9 +122,9 @@ print(f"Daily Risk Exposure: ${risk_exposure:,.2f}")
             </section>
 
             <section>
-                <h3>Q&A</h3>
-                <p>Thank you for your attention.</p>
-                <p style="margin-top: 40px;">
+                <h3 class="fragment fade-down">Q&A</h3>
+                <p class="fragment fade-in">Thank you for your attention.</p>
+                <p class="fragment fade-up" style="margin-top: 40px;">
                     <small>Get in touch regarding this report:</small><br>
                     <a href="mailto:24f2001048@ds.study.iitm.ac.in" style="font-size: 1.2em; color: #42affa; font-weight: bold;">
                         24f2001048@ds.study.iitm.ac.in
@@ -136,15 +142,12 @@ print(f"Daily Risk Exposure: ${risk_exposure:,.2f}")
     <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/notes/notes.js"></script>
 
     <script>
-        // Initialize Reveal
         Reveal.initialize({
-            controls: true,       // Show arrows
-            progress: true,       // Show progress bar
-            center: true,         // Center slides vertically
-            hash: true,           // Add slide ID to URL
-            slideNumber: true,    // Show slide numbers
-
-            // Load Plugins
+            controls: true,
+            progress: true,
+            center: true,
+            hash: true,
+            slideNumber: true,
             plugins: [ RevealMarkdown, RevealHighlight, RevealMath.KaTeX, RevealNotes ]
         });
     </script>
